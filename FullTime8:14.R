@@ -202,7 +202,7 @@ analyze_eeg_final <- function(theSignal, sampling_rate, power_low, power_high, p
   return(result_data)
 }
 
-cat("\n=== PROCESSING ALL CHANNELS ===\n")
+cat("\nThis is all channels\n")
 
 nyquist_freq <- sampleRate / 2
 low <- 1 / nyquist_freq
@@ -346,7 +346,7 @@ evaluate_optimized_method <- function() {
 # Evaluate optimized method
 method_result <- evaluate_optimized_method()
 
-cat("\n=== PERFORMANCE METRICS ===\n")
+cat("\nPerformance\n")
 cat(sprintf("Power + Autocorr + Entropy (Optimized):\n"))
 cat(sprintf("  PPV: %.1f%%\n", method_result$ppv))
 cat(sprintf("  Sensitivity: %.1f%%\n", method_result$sensitivity))
@@ -389,7 +389,7 @@ time_labels <- sapply(time_breaks, function(offset) {
 green_zones <- correct_zones[correct_zones$color_type == "green", ]
 yellow_zones <- correct_zones[correct_zones$color_type == "yellow", ]
 
-cat("\n=== CREATING POWER + AUTOCORR + ENTROPY PLOT ===\n")
+cat("\n Plot \n")
 
 optimized_plot <- ggplot() +
   # Corrected seizure zones
